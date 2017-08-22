@@ -5,6 +5,7 @@
 "db.sqlite3" 
 "db.sqlite3" 
 "__pycache__" 
-"*.pyc" 
+"*.pyc"
 "lists/__pycache__/tests.cpython-36.pyc"
 "lists/__pycache__/tests.cpython-36.pyc"
+"lists/__pycache__/"
