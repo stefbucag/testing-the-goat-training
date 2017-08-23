@@ -11,6 +11,7 @@ class NewVisitorTest(unittest.TestCase):
 
     def tearDown(self):
         self.browser.quit()
+        # pass
 
     def check_for_row_in_list_table(self, row_text):
         table = self.browser.find_element_by_id('id_list_table')
@@ -35,7 +36,6 @@ class NewVisitorTest(unittest.TestCase):
         self.assertEqual(
             inputbox.get_attribute('placeholder'),
             'Enter a to-do item'
-
         )
 
         # She types "Buy peacock feathers" into a test box
