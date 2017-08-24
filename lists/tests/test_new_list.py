@@ -4,7 +4,7 @@ from django.template.loader import render_to_string
 from django.test import TestCase
 
 from lists.views import home_page
-from lists.models import Item
+from lists.models import Item, List
 
 
 class NewListTest(TestCase):
@@ -22,4 +22,5 @@ class NewListTest(TestCase):
         # self.assertEqual(response.status_code, 302)
         # self.assertEqual(response['location'], '/lists/the-only-list-in-the-world/')
 
-        self.assertRedirects(response, '/lists/the-only-list-in-the-world/')
+        new_list = List.objects.first()
+        self.assertRedirects(response, f'/lists/{new_list.id}/')
